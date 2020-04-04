@@ -57,7 +57,9 @@ class WC_Product_Simple extends WC_Product {
 	 * @return string
 	 */
 	public function add_to_cart_text() {
-		$text = $this->is_purchasable() && $this->is_in_stock() ? __( 'Add to cart', 'woocommerce' ) : __( 'Read more', 'woocommerce' );
+		// Add to cart
+		// Read more
+		$text = $this->is_purchasable() && $this->is_in_stock() ? __( 'Agregar a pedido', 'woocommerce' ) : __( 'Leer más', 'woocommerce' );
 
 		return apply_filters( 'woocommerce_product_add_to_cart_text', $text, $this );
 	}
