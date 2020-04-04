@@ -236,9 +236,9 @@ class WC_Checkout {
 				'order_comments' => array(
 					'type'        => 'textarea',
 					'class'       => array( 'notes' ),
-					'label'       => __( 'Order notes', 'woocommerce' ),
+					'label'       => __( 'Nota del pedido', 'woocommerce' ),
 					'placeholder' => esc_attr__(
-						'Notes about your order, e.g. special notes for delivery.',
+						'Notas sobre su pedido, ejemplo notas especiales para la entrega.',
 						'woocommerce'
 					),
 				),
@@ -1091,7 +1091,7 @@ class WC_Checkout {
 
 			if ( WC()->cart->is_empty() ) {
 				/* translators: %s: shop cart url */
-				throw new Exception( sprintf( __( 'Sorry, your session has expired. <a href="%s" class="wc-backward">Return to shop</a>', 'woocommerce' ), esc_url( wc_get_page_permalink( 'shop' ) ) ) );
+				throw new Exception( sprintf( __( 'Sorry, your session has expired. <a href="%s" class="wc-backward">Volver a la tienda</a>', 'woocommerce' ), esc_url( wc_get_page_permalink( 'shop' ) ) ) );
 			}
 
 			do_action( 'woocommerce_checkout_process' );

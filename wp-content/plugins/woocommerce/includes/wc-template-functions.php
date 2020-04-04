@@ -1739,7 +1739,7 @@ if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
 		// Description tab - shows product content.
 		if ( $post->post_content ) {
 			$tabs['description'] = array(
-				'title'    => __( 'Description', 'woocommerce' ),
+				'title'    => __( 'Descripción', 'woocommerce' ),
 				'priority' => 10,
 				'callback' => 'woocommerce_product_description_tab',
 			);
@@ -1748,7 +1748,7 @@ if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
 		// Additional information tab - shows attributes.
 		if ( $product && ( $product->has_attributes() || apply_filters( 'wc_product_enable_dimensions_display', $product->has_weight() || $product->has_dimensions() ) ) ) {
 			$tabs['additional_information'] = array(
-				'title'    => __( 'Additional information', 'woocommerce' ),
+				'title'    => __( 'Additional information datalima', 'woocommerce' ),
 				'priority' => 20,
 				'callback' => 'woocommerce_product_additional_information_tab',
 			);
@@ -1758,7 +1758,7 @@ if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
 		if ( comments_open() ) {
 			$tabs['reviews'] = array(
 				/* translators: %s: reviews count */
-				'title'    => sprintf( __( 'Reviews (%d)', 'woocommerce' ), $product->get_review_count() ),
+				'title'    => sprintf( __( 'Comentarios (%d)', 'woocommerce' ), $product->get_review_count() ),
 				'priority' => 30,
 				'callback' => 'comments_template',
 			);
@@ -2076,7 +2076,7 @@ if ( ! function_exists( 'woocommerce_widget_shopping_cart_button_view_cart' ) ) 
 	 * Output the view cart button.
 	 */
 	function woocommerce_widget_shopping_cart_button_view_cart() {
-		echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward">' . esc_html__( 'View cart', 'woocommerce' ) . '</a>';
+		echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward">' . esc_html__( 'Ver carrito', 'woocommerce' ) . '</a>';
 	}
 }
 
@@ -2237,7 +2237,7 @@ if ( ! function_exists( 'woocommerce_checkout_payment' ) ) {
 			array(
 				'checkout'           => WC()->checkout(),
 				'available_gateways' => $available_gateways,
-				'order_button_text'  => apply_filters( 'woocommerce_order_button_text', __( 'Place order', 'woocommerce' ) ),
+				'order_button_text'  => apply_filters( 'woocommerce_order_button_text', __( 'Realizar pedido', 'woocommerce' ) ),
 			)
 		);
 	}
@@ -3502,7 +3502,7 @@ function wc_logout_url( $redirect = '' ) {
  * @since 3.1.0
  */
 function wc_empty_cart_message() {
-	echo '<p class="cart-empty woocommerce-info">' . wp_kses_post( apply_filters( 'wc_empty_cart_message', __( 'Your cart is currently empty.', 'woocommerce' ) ) ) . '</p>';
+	echo '<p class="cart-empty woocommerce-info">' . wp_kses_post( apply_filters( 'wc_empty_cart_message', __( 'Su carrito está vacío.', 'woocommerce' ) ) ) . '</p>';
 }
 
 /**

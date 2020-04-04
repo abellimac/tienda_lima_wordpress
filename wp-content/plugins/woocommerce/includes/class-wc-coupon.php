@@ -951,7 +951,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 				break;
 			case self::E_WC_COUPON_NOT_EXIST:
 				/* translators: %s: coupon code */
-				$err = sprintf( __( 'Coupon "%s" does not exist!', 'woocommerce' ), esc_html( $this->get_code() ) );
+				$err = sprintf( __( '¡El cupón "%s" does not exist!', 'woocommerce' ), esc_html( $this->get_code() ) );
 				break;
 			case self::E_WC_COUPON_INVALID_REMOVED:
 				/* translators: %s: coupon code */
@@ -1040,10 +1040,10 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	public static function get_generic_coupon_error( $err_code ) {
 		switch ( $err_code ) {
 			case self::E_WC_COUPON_NOT_EXIST:
-				$err = __( 'Coupon does not exist!', 'woocommerce' );
+				$err = __( '¡El cupón no existe!', 'woocommerce' );
 				break;
 			case self::E_WC_COUPON_PLEASE_ENTER:
-				$err = __( 'Please enter a coupon code.', 'woocommerce' );
+				$err = __( 'Por favor, introduzca un código de cupón.', 'woocommerce' );
 				break;
 			default:
 				$err = '';

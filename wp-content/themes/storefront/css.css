@@ -56,5 +56,17 @@ h1.product_title.entry-title {
 	width: 230px !important;
 }
 
+.woocommerce-message {
+    margin: 12px 0 !important;
+}
+
+td.product-name, td.product-price, td.product-quantity {
+    border-bottom: 1px solid #e8e8e8;
+}
+
 @media (max-width: 767px) {
+    #respond .form-submit, #respond form {
+        /*margin-bottom: 0;*/
+        /*text-align: right;*/
+    }
 }

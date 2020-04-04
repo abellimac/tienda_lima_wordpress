@@ -2353,7 +2353,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			),
 			sprintf(
 				'<label for="wp-comment-cookies-consent">%s</label>',
-				__( 'Save my name, email, and website in this browser for the next time I comment.' )
+				__( 'Guarde mi nombre, correo electrónico y sitio web en este navegador para la próxima vez que comente.' )
 			)
 		);
 
@@ -2365,7 +2365,7 @@ function comment_form( $args = array(), $post_id = null ) {
 
 	$required_text = sprintf(
 		/* translators: %s: Asterisk symbol (*). */
-		' ' . __( 'Required fields are marked %s' ),
+		' ' . __( '<br>Los campos obligatorios están marcados %s' ),
 		'<span class="required">*</span>'
 	);
 
@@ -2414,7 +2414,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			'<p class="comment-notes">%s%s</p>',
 			sprintf(
 				'<span id="email-notes">%s</span>',
-				__( 'Your email address will not be published.' )
+				__( 'Su dirección de correo electrónico no será publicada.' )
 			),
 			( $req ? $required_text : '' )
 		),
